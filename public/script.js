@@ -20,7 +20,6 @@ button.addEventListener("click", function() {
 
     for (let i = 0; i < buttonDelete.length; i++) {
 
-        // const element = array[index];
         // buttonDelete[i].onclick = function() {
         //         this.parentNode.remove();
         //     }
