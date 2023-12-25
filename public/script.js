@@ -1,5 +1,4 @@
 const button = document.getElementById("btn");
-
 button.addEventListener("click", function() {
     if (document.querySelector("#wrapper input").value.length == 0) {
         alert("Todo List tidak boleh kosong")
@@ -9,18 +8,17 @@ button.addEventListener("click", function() {
                 <span id="taskname">
                  ${document.querySelector('#wrapper input').value}
                 </span>
-                <button class="delete">
-                <i class='bx bx-trash'></i>
-                </button>
-                <button class="reload">
-                <i class='bx bx-recycle'></i>
-                </button>
+                    <button class="delete">
+                    <i class='bx bx-trash'></i>
+                    </button>
+                    <button class="reload">
+                    <i class='bx bx-recycle'></i>
+                    </button>
              </div>
              `;
     };
 
     const buttonDelete = document.querySelectorAll(".delete");
-
     for (let i = 0; i < buttonDelete.length; i++) {
         // buttonDelete[i].onclick = function() {
         //         this.parentNode.remove();
@@ -35,9 +33,11 @@ button.addEventListener("click", function() {
 
     for (let b = 0; b < reload.length; b++) {
         reload[b].addEventListener("click", function() {
-            reload[b].parentElement.style.textDecoration = "line-through"
+            tasks[b].parentElement.style.textDecoration = "line-through"
                 // this.classList.toggle("complete");
         })
+
+        document.querySelector("#wrapper input").value = "";
 
     }
 
