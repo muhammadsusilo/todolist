@@ -68,14 +68,13 @@
         cursor: pointer;
     }
     
-    .delete {
+    button {
         font-size: 1.5rem;
         background-color: var(--font-black);
         color: var(--font-white);
-        height: 100%;
+        height: 40px;
         width: 40px;
         text-align: center;
-        /* text-decoration: underline; */
     }
     
     .complete {
