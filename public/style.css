@@ -68,7 +68,7 @@
         cursor: pointer;
     }
     
-    .delete {
+    button {
         font-size: 1.5rem;
         background-color: var(--font-black);
         color: var(--font-white);
