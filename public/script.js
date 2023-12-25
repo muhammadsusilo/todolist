@@ -10,7 +10,10 @@ button.addEventListener("click", function() {
                  ${document.querySelector('#wrapper input').value}
                 </span>
                 <button class="delete">
-                <i class='bx bx-message-square-x'></i>
+                <i class='bx bx-trash'></i>
+                </button>
+                <button class="reload">
+                <i class='bx bx-recycle'></i>
                 </button>
              </div>
              `;
@@ -19,26 +22,34 @@ button.addEventListener("click", function() {
     const buttonDelete = document.querySelectorAll(".delete");
 
     for (let i = 0; i < buttonDelete.length; i++) {
-
         // const element = array[index];
         // buttonDelete[i].onclick = function() {
         //         this.parentNode.remove();
         //     }
-
         buttonDelete[i].addEventListener("click", function() {
             this.parentNode.remove();
         })
     }
 
+    const reload = document.querySelectorAll(".reload");
     const tasks = document.querySelectorAll(".tasks");
 
-    for (let a = 0; a < tasks.length; a++) {
-        tasks[a].addEventListener("click", function() {
-            this.classList.toggle("complete");
+    for (let b = 0; b < reload.length; b++) {
+        reload[b].addEventListener("click", function() {
+            reload[b].parentElement.style.textDecoration = "line-through"
+                // this.classList.toggle("complete");
         })
+
     }
 
-    document.querySelector("#wrapper input").value = "";
+    // melakukan garis tengah saat di klik lewat kursor
+    // const tasks = document.querySelectorAll(".tasks");
+    // for (let a = 0; a < tasks.length; a++) {
+    //     tasks[a].addEventListener("click", function() {
+    //         this.classList.toggle("complete");
+    //     })
+    // }
 
+    document.querySelector("#wrapper input").value = "";
 
 });
