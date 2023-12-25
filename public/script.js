@@ -14,7 +14,7 @@ button.addEventListener("click", function() {
                 </button>
              </div>
              `;
-    }
+    };
 
     const buttonDelete = document.querySelectorAll(".delete");
 
@@ -38,6 +38,5 @@ button.addEventListener("click", function() {
     }
 
     document.querySelector("#wrapper input").value = "";
-
 
 });
